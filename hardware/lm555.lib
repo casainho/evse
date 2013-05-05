@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3  Date: Dom 05 Mai 2013 16:46:15 WEST
+#encoding utf-8
+#
+# LM555
+#
+DEF LM555 U 0 40 Y Y 1 F N
+F0 "U" -50 0 60 H V C CNN
+F1 "LM555" -50 100 60 H V C CNN
+DRAW
+S -600 -400 -600 350 0 1 0 N
+S -600 350 600 350 0 1 0 N
+S 600 -400 -600 -400 0 1 0 N
+S 600 350 600 -400 0 1 0 N
+X gnd 1 -900 200 300 R 50 50 1 1 I
+X trigger 2 -900 50 300 R 50 50 1 1 I
+X output 3 -900 -100 300 R 50 50 1 1 I
+X reset 4 -900 -250 300 R 50 50 1 1 I
+X control_voltage 5 900 -250 300 L 50 50 1 1 I
+X threshold 6 900 -100 300 L 50 50 1 1 I
+X discharge 7 900 50 300 L 50 50 1 1 I
+X vcc 8 900 200 300 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
