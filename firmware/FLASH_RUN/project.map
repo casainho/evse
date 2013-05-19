@@ -1,0 +1,1147 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 FLASH_RUN/main.o
+ .data          0x00000000        0x0 FLASH_RUN/main.o
+ .bss           0x00000000        0x0 FLASH_RUN/main.o
+ .text          0x00000000        0x0 FLASH_RUN/gpio.o
+ .data          0x00000000        0x0 FLASH_RUN/gpio.o
+ .bss           0x00000000        0x0 FLASH_RUN/gpio.o
+ .text.debug_on
+                0x00000000       0x1c FLASH_RUN/gpio.o
+ .text.debug_off
+                0x00000000       0x1c FLASH_RUN/gpio.o
+ .text          0x00000000        0x0 FLASH_RUN/adc.o
+ .data          0x00000000        0x0 FLASH_RUN/adc.o
+ .bss           0x00000000        0x0 FLASH_RUN/adc.o
+ .text          0x00000000        0x0 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .data          0x00000000        0x0 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .bss           0x00000000        0x0 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .text          0x00000000        0x0 FLASH_RUN/core_cm3.o
+ .data          0x00000000        0x0 FLASH_RUN/core_cm3.o
+ .bss           0x00000000        0x0 FLASH_RUN/core_cm3.o
+ .text.__get_PSP
+                0x00000000       0x10 FLASH_RUN/core_cm3.o
+ .text.__set_PSP
+                0x00000000        0x8 FLASH_RUN/core_cm3.o
+ .text.__get_MSP
+                0x00000000       0x10 FLASH_RUN/core_cm3.o
+ .text.__set_MSP
+                0x00000000        0x8 FLASH_RUN/core_cm3.o
+ .text.__get_BASEPRI
+                0x00000000       0x20 FLASH_RUN/core_cm3.o
+ .text.__set_BASEPRI
+                0x00000000       0x18 FLASH_RUN/core_cm3.o
+ .text.__get_PRIMASK
+                0x00000000       0x20 FLASH_RUN/core_cm3.o
+ .text.__set_PRIMASK
+                0x00000000       0x18 FLASH_RUN/core_cm3.o
+ .text.__get_FAULTMASK
+                0x00000000       0x20 FLASH_RUN/core_cm3.o
+ .text.__set_FAULTMASK
+                0x00000000       0x18 FLASH_RUN/core_cm3.o
+ .text.__get_CONTROL
+                0x00000000       0x20 FLASH_RUN/core_cm3.o
+ .text.__set_CONTROL
+                0x00000000       0x18 FLASH_RUN/core_cm3.o
+ .text.__REV    0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__REV16  0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__REVSH  0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__RBIT   0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__LDREXB
+                0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__LDREXH
+                0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__LDREXW
+                0x00000000       0x24 FLASH_RUN/core_cm3.o
+ .text.__STREXB
+                0x00000000       0x2c FLASH_RUN/core_cm3.o
+ .text.__STREXH
+                0x00000000       0x2c FLASH_RUN/core_cm3.o
+ .text.__STREXW
+                0x00000000       0x28 FLASH_RUN/core_cm3.o
+ .text          0x00000000        0x0 FLASH_RUN/system_stm32f10x.o
+ .data          0x00000000        0x0 FLASH_RUN/system_stm32f10x.o
+ .bss           0x00000000        0x0 FLASH_RUN/system_stm32f10x.o
+ .data.SystemCoreClock
+                0x00000000        0x4 FLASH_RUN/system_stm32f10x.o
+ .data.AHBPrescTable
+                0x00000000       0x10 FLASH_RUN/system_stm32f10x.o
+ .text.SystemCoreClockUpdate
+                0x00000000      0x148 FLASH_RUN/system_stm32f10x.o
+ .text          0x00000000        0x0 FLASH_RUN/stm32f10x_adc.o
+ .data          0x00000000        0x0 FLASH_RUN/stm32f10x_adc.o
+ .bss           0x00000000        0x0 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_DeInit
+                0x00000000       0xac FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_StructInit
+                0x00000000       0x44 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ITConfig
+                0x00000000       0x4c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartConvStatus
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_DiscModeChannelCountConfig
+                0x00000000       0x4c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_DiscModeCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ExternalTrigConvCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetConversionValue
+                0x00000000       0x1c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetDualModeConversionValue
+                0x00000000       0x18 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_AutoInjectedConvCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_InjectedDiscModeCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x00000000       0x38 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_InjectedChannelConfig
+                0x00000000      0x150 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_InjectedSequencerLengthConfig
+                0x00000000       0x4c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_SetInjectedOffset
+                0x00000000       0x34 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetInjectedConversionValue
+                0x00000000       0x34 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogCmd
+                0x00000000       0x3c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x00000000       0x28 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x00000000       0x3c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_TempSensorVrefintCmd
+                0x00000000       0x4c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetFlagStatus
+                0x00000000       0x3c FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ClearFlag
+                0x00000000       0x20 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_GetITStatus
+                0x00000000       0x68 FLASH_RUN/stm32f10x_adc.o
+ .text.ADC_ClearITPendingBit
+                0x00000000       0x30 FLASH_RUN/stm32f10x_adc.o
+ .text          0x00000000        0x0 FLASH_RUN/stm32f10x_gpio.o
+ .data          0x00000000        0x0 FLASH_RUN/stm32f10x_gpio.o
+ .bss           0x00000000        0x0 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_DeInit
+                0x00000000      0x17c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x00000000       0x2c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_StructInit
+                0x00000000       0x2c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_ReadInputDataBit
+                0x00000000       0x3c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_ReadInputData
+                0x00000000       0x1c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_ReadOutputDataBit
+                0x00000000       0x3c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x00000000       0x1c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_WriteBit
+                0x00000000       0x30 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_Write
+                0x00000000       0x1c FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x00000000       0x44 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_EventOutputConfig
+                0x00000000       0x60 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_EventOutputCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_PinRemapConfig
+                0x00000000      0x124 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_EXTILineConfig
+                0x00000000       0xb8 FLASH_RUN/stm32f10x_gpio.o
+ .text.GPIO_ETH_MediaInterfaceConfig
+                0x00000000       0x20 FLASH_RUN/stm32f10x_gpio.o
+ .text          0x00000000        0x0 FLASH_RUN/stm32f10x_rcc.o
+ .data          0x00000000        0x0 FLASH_RUN/stm32f10x_rcc.o
+ .bss           0x00000000        0x0 FLASH_RUN/stm32f10x_rcc.o
+ .data.APBAHBPrescTable
+                0x00000000       0x10 FLASH_RUN/stm32f10x_rcc.o
+ .data.ADCPrescTable
+                0x00000000        0x4 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_DeInit
+                0x00000000       0x9c FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_HSEConfig
+                0x00000000       0x84 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_WaitForHSEStartUp
+                0x00000000       0x70 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000       0x48 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_HSICmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_PLLConfig
+                0x00000000       0x4c FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_PLLCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_SYSCLKConfig
+                0x00000000       0x44 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_GetSYSCLKSource
+                0x00000000       0x1c FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_HCLKConfig
+                0x00000000       0x44 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_PCLK1Config
+                0x00000000       0x44 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_PCLK2Config
+                0x00000000       0x48 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_ITConfig
+                0x00000000       0x64 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_LSEConfig
+                0x00000000       0x5c FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_LSICmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x00000000       0x2c FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_GetClocksFreq
+                0x00000000      0x1c8 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_APB2PeriphResetCmd
+                0x00000000       0x58 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_APB1PeriphResetCmd
+                0x00000000       0x58 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_MCOConfig
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_GetFlagStatus
+                0x00000000       0x90 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_ClearFlag
+                0x00000000       0x24 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_GetITStatus
+                0x00000000       0x40 FLASH_RUN/stm32f10x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x00000000       0x20 FLASH_RUN/stm32f10x_rcc.o
+ .text          0x00000000        0x0 FLASH_RUN/stm32f10x_pwr.o
+ .data          0x00000000        0x0 FLASH_RUN/stm32f10x_pwr.o
+ .bss           0x00000000        0x0 FLASH_RUN/stm32f10x_pwr.o
+ .text.__WFI    0x00000000        0xc FLASH_RUN/stm32f10x_pwr.o
+ .text.__WFE    0x00000000        0xc FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_DeInit
+                0x00000000       0x2c FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_BackupAccessCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_PVDCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_PVDLevelConfig
+                0x00000000       0x44 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_WakeUpPinCmd
+                0x00000000       0x20 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_EnterSTOPMode
+                0x00000000       0x90 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_EnterSTANDBYMode
+                0x00000000       0x58 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_GetFlagStatus
+                0x00000000       0x40 FLASH_RUN/stm32f10x_pwr.o
+ .text.PWR_ClearFlag
+                0x00000000       0x30 FLASH_RUN/stm32f10x_pwr.o
+ .text          0x00000000        0x0 FLASH_RUN/stm32f10x_dma.o
+ .data          0x00000000        0x0 FLASH_RUN/stm32f10x_dma.o
+ .bss           0x00000000        0x0 FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_StructInit
+                0x00000000       0x6c FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_ITConfig
+                0x00000000       0x40 FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_GetCurrDataCounter
+                0x00000000       0x1c FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_GetFlagStatus
+                0x00000000       0x60 FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_ClearFlag
+                0x00000000       0x38 FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_GetITStatus
+                0x00000000       0x60 FLASH_RUN/stm32f10x_dma.o
+ .text.DMA_ClearITPendingBit
+                0x00000000       0x38 FLASH_RUN/stm32f10x_dma.o
+ .text          0x00000000        0x0 FLASH_RUN/misc.o
+ .data          0x00000000        0x0 FLASH_RUN/misc.o
+ .bss           0x00000000        0x0 FLASH_RUN/misc.o
+ .text.NVIC_PriorityGroupConfig
+                0x00000000       0x28 FLASH_RUN/misc.o
+ .text.NVIC_Init
+                0x00000000       0xec FLASH_RUN/misc.o
+ .text.NVIC_SystemLPConfig
+                0x00000000       0x58 FLASH_RUN/misc.o
+ .text.SysTick_CLKSourceConfig
+                0x00000000       0x4c FLASH_RUN/misc.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00001000         xrw
+EXTSRAM          0x68000000         0x00000000         xrw
+FLASH            0x08000000         0x0001f800         xr
+FLASHB1          0x00000000         0x00000000         xr
+EXTMEMB0         0x00000000         0x00000000         xr
+EXTMEMB1         0x00000000         0x00000000         xr
+EXTMEMB2         0x00000000         0x00000000         xr
+EXTMEMB3         0x00000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD FLASH_RUN/main.o
+LOAD FLASH_RUN/gpio.o
+LOAD FLASH_RUN/adc.o
+LOAD FLASH_RUN/startup_stm32f10x_md_mthomas.o
+LOAD FLASH_RUN/core_cm3.o
+LOAD FLASH_RUN/system_stm32f10x.o
+LOAD FLASH_RUN/stm32f10x_adc.o
+LOAD FLASH_RUN/stm32f10x_gpio.o
+LOAD FLASH_RUN/stm32f10x_rcc.o
+LOAD FLASH_RUN/stm32f10x_pwr.o
+LOAD FLASH_RUN/stm32f10x_dma.o
+LOAD FLASH_RUN/misc.o
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2/libc.a
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2/libm.a
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2/libc.a
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/libgcc.a
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2/libstdc++.a
+START GROUP
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/libgcc.a
+LOAD /home/cas/arm/toolchain/code_sourcery/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+                0x20001000                _estack = 0x20001000
+                0x00000100                _Minimum_Stack_Size = 0x100
+                0x00000001                ASSERT (0x1, Start of memory region flash not aligned for startup vector table)
+
+.text           0x08000000     0x14b0
+                0x08000000                . = ALIGN (0x80)
+                0x00000000                _isr_vectorsflash_offs = (. - 0x8000000)
+ *(.isr_vectorsflash)
+ .isr_vectorsflash
+                0x08000000      0x10c FLASH_RUN/startup_stm32f10x_md_mthomas.o
+                0x08000000                g_pfnVectors
+                0x0800010c                . = ALIGN (0x4)
+ CREATE_OBJECT_SYMBOLS
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text.NVIC_SetPriority
+                0x0800010c       0x5c FLASH_RUN/main.o
+ .text.SysTick_Config
+                0x08000168       0x68 FLASH_RUN/main.o
+ .text.manage_led
+                0x080001d0      0x144 FLASH_RUN/main.o
+                0x080001d0                manage_led
+ .text.manage_ev_state
+                0x08000314       0x80 FLASH_RUN/main.o
+                0x08000314                manage_ev_state
+ .text.manage_cp
+                0x08000394       0xa8 FLASH_RUN/main.o
+                0x08000394                manage_cp
+ .text.SysTick_Handler
+                0x0800043c       0x1c FLASH_RUN/main.o
+                0x0800043c                SysTick_Handler
+ .text.initialize
+                0x08000458       0x30 FLASH_RUN/main.o
+                0x08000458                initialize
+ .text.main     0x08000488       0x10 FLASH_RUN/main.o
+                0x08000488                main
+ .text.gpio_init
+                0x08000498       0xd8 FLASH_RUN/gpio.o
+                0x08000498                gpio_init
+ .text.adc_init
+                0x08000570      0x1a8 FLASH_RUN/adc.o
+                0x08000570                adc_init
+ .text.adc_get_value
+                0x08000718       0x18 FLASH_RUN/adc.o
+                0x08000718                adc_get_value
+ .text.Reset_Handler
+                0x08000730       0x64 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+                0x08000730                Reset_Handler
+ .text.__Init_Data_and_BSS
+                0x08000794       0x80 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+                0x08000794                __Init_Data_and_BSS
+ .text.Default_Handler
+                0x08000814        0x8 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+                0x08000814                EXTI2_IRQHandler
+                0x08000814                DebugMon_Handler
+                0x08000814                TIM1_CC_IRQHandler
+                0x08000814                PVD_IRQHandler
+                0x08000814                PendSV_Handler
+                0x08000814                EXTI3_IRQHandler
+                0x08000814                EXTI0_IRQHandler
+                0x08000814                I2C2_EV_IRQHandler
+                0x08000814                UsageFault_Handler
+                0x08000814                ADC1_2_IRQHandler
+                0x08000814                SPI1_IRQHandler
+                0x08000814                TAMPER_IRQHandler
+                0x08000814                DMA1_Channel4_IRQHandler
+                0x08000814                USART3_IRQHandler
+                0x08000814                RTC_IRQHandler
+                0x08000814                DMA1_Channel7_IRQHandler
+                0x08000814                CAN1_RX1_IRQHandler
+                0x08000814                TIM4_IRQHandler
+                0x08000814                I2C1_EV_IRQHandler
+                0x08000814                DMA1_Channel6_IRQHandler
+                0x08000814                TIM3_IRQHandler
+                0x08000814                RCC_IRQHandler
+                0x08000814                TIM1_TRG_COM_IRQHandler
+                0x08000814                DMA1_Channel1_IRQHandler
+                0x08000814                Default_Handler
+                0x08000814                EXTI15_10_IRQHandler
+                0x08000814                EXTI9_5_IRQHandler
+                0x08000814                SPI2_IRQHandler
+                0x08000814                MemManage_Handler
+                0x08000814                SVC_Handler
+                0x08000814                DMA1_Channel5_IRQHandler
+                0x08000814                EXTI4_IRQHandler
+                0x08000814                USB_LP_CAN1_RX0_IRQHandler
+                0x08000814                USB_HP_CAN1_TX_IRQHandler
+                0x08000814                DMA1_Channel3_IRQHandler
+                0x08000814                TIM1_UP_IRQHandler
+                0x08000814                WWDG_IRQHandler
+                0x08000814                TIM2_IRQHandler
+                0x08000814                TIM1_BRK_IRQHandler
+                0x08000814                EXTI1_IRQHandler
+                0x08000814                RTCAlarm_IRQHandler
+                0x08000814                USART2_IRQHandler
+                0x08000814                I2C2_ER_IRQHandler
+                0x08000814                DMA1_Channel2_IRQHandler
+                0x08000814                CAN1_SCE_IRQHandler
+                0x08000814                FLASH_IRQHandler
+                0x08000814                BusFault_Handler
+                0x08000814                USART1_IRQHandler
+                0x08000814                I2C1_ER_IRQHandler
+                0x08000814                MMI_Handler
+                0x08000814                USBWakeUp_IRQHandler
+ .text.SystemInit
+                0x0800081c       0xa4 FLASH_RUN/system_stm32f10x.o
+                0x0800081c                SystemInit
+ .text.SetSysClock
+                0x080008c0       0x10 FLASH_RUN/system_stm32f10x.o
+ .text.SetSysClockTo24
+                0x080008d0      0x1a0 FLASH_RUN/system_stm32f10x.o
+ .text.ADC_Init
+                0x08000a70       0xc0 FLASH_RUN/stm32f10x_adc.o
+                0x08000a70                ADC_Init
+ .text.ADC_Cmd  0x08000b30       0x38 FLASH_RUN/stm32f10x_adc.o
+                0x08000b30                ADC_Cmd
+ .text.ADC_DMACmd
+                0x08000b68       0x38 FLASH_RUN/stm32f10x_adc.o
+                0x08000b68                ADC_DMACmd
+ .text.ADC_ResetCalibration
+                0x08000ba0       0x20 FLASH_RUN/stm32f10x_adc.o
+                0x08000ba0                ADC_ResetCalibration
+ .text.ADC_GetResetCalibrationStatus
+                0x08000bc0       0x38 FLASH_RUN/stm32f10x_adc.o
+                0x08000bc0                ADC_GetResetCalibrationStatus
+ .text.ADC_StartCalibration
+                0x08000bf8       0x20 FLASH_RUN/stm32f10x_adc.o
+                0x08000bf8                ADC_StartCalibration
+ .text.ADC_GetCalibrationStatus
+                0x08000c18       0x38 FLASH_RUN/stm32f10x_adc.o
+                0x08000c18                ADC_GetCalibrationStatus
+ .text.ADC_SoftwareStartConvCmd
+                0x08000c50       0x38 FLASH_RUN/stm32f10x_adc.o
+                0x08000c50                ADC_SoftwareStartConvCmd
+ .text.ADC_RegularChannelConfig
+                0x08000c88      0x1d0 FLASH_RUN/stm32f10x_adc.o
+                0x08000c88                ADC_RegularChannelConfig
+ .text.GPIO_Init
+                0x08000e58      0x1c0 FLASH_RUN/stm32f10x_gpio.o
+                0x08000e58                GPIO_Init
+ .text.GPIO_SetBits
+                0x08001018       0x1c FLASH_RUN/stm32f10x_gpio.o
+                0x08001018                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x08001034       0x1c FLASH_RUN/stm32f10x_gpio.o
+                0x08001034                GPIO_ResetBits
+ .text.RCC_ADCCLKConfig
+                0x08001050       0x44 FLASH_RUN/stm32f10x_rcc.o
+                0x08001050                RCC_ADCCLKConfig
+ .text.RCC_AHBPeriphClockCmd
+                0x08001094       0x58 FLASH_RUN/stm32f10x_rcc.o
+                0x08001094                RCC_AHBPeriphClockCmd
+ .text.RCC_APB2PeriphClockCmd
+                0x080010ec       0x58 FLASH_RUN/stm32f10x_rcc.o
+                0x080010ec                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x08001144       0x58 FLASH_RUN/stm32f10x_rcc.o
+                0x08001144                RCC_APB1PeriphClockCmd
+ .text.DMA_DeInit
+                0x0800119c      0x21c FLASH_RUN/stm32f10x_dma.o
+                0x0800119c                DMA_DeInit
+ .text.DMA_Init
+                0x080013b8       0x90 FLASH_RUN/stm32f10x_dma.o
+                0x080013b8                DMA_Init
+ .text.DMA_Cmd  0x08001448       0x38 FLASH_RUN/stm32f10x_dma.o
+                0x08001448                DMA_Cmd
+ .text.NVIC_SetVectorTable
+                0x08001480       0x30 FLASH_RUN/misc.o
+                0x08001480                NVIC_SetVectorTable
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x080014b0        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+                0x080014b0                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x080014b0                __exidx_end = .
+
+.rodata         0x080014b0        0x0
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+                0x080014b0                . = ALIGN (0x4)
+ *(.init)
+                0x080014b0                . = ALIGN (0x4)
+                0x080014b0                __preinit_array_start = .
+ *(.preinit_array)
+                0x080014b0                __preinit_array_end = .
+                0x080014b0                . = ALIGN (0x4)
+                0x080014b0                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x080014b0                __init_array_end = .
+                0x080014b0                . = ALIGN (0x4)
+ *(.fini)
+                0x080014b0                . = ALIGN (0x4)
+                0x080014b0                __fini_array_start = .
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x080014b0                __fini_array_end = .
+                0x080014b0                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x080014b0                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+ *(.init .init.*)
+ *(.fini .fini.*)
+                0x080014b0                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x080014b0                PROVIDE (__preinit_array_end, .)
+                0x080014b0                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x080014b0                PROVIDE (__init_array_end, .)
+                0x080014b0                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x080014b0                PROVIDE (__fini_array_end, .)
+                0x080014b0                . = ALIGN (0x8)
+ *(.rom)
+ *(.rom.b)
+                0x080014b0                _etext = .
+                0x080014b0                _sidata = _etext
+
+.data           0x20000000       0x10 load address 0x080014b0
+                0x20000000                _sdata = .
+                0x20000000                . = ALIGN (0x80)
+                0x00000000                _isr_vectorsram_offs = (. - 0x20000000)
+ *(.isr_vectorsram)
+                0x20000000                . = ALIGN (0x4)
+ *(.jcr)
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.ev_state
+                0x20000000        0x4 FLASH_RUN/main.o
+                0x20000000                ev_state
+ .data.value.3203
+                0x20000004        0x4 FLASH_RUN/main.o
+ .data.c.3175   0x20000008        0x4 FLASH_RUN/main.o
+                0x20000010                . = ALIGN (0x8)
+ *fill*         0x2000000c        0x4 00
+ *(.ram)
+ *(.ramfunc*)
+                0x20000010                . = ALIGN (0x4)
+                0x20000010                _edata = .
+
+.bss            0x20000010        0x8 load address 0x080014c0
+                0x20000010                . = ALIGN (0x4)
+                0x20000010                _sbss = .
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.c.3221    0x20000010        0x4 FLASH_RUN/main.o
+ .bss.adc_value
+                0x20000014        0x4 FLASH_RUN/adc.o
+ *(COMMON)
+                0x20000018                . = ALIGN (0x8)
+ *(.ram.b)
+                0x20000018                . = ALIGN (0x4)
+                0x20000018                _ebss = .
+                0x20000018                _end = .
+                0x20000018                __end = .
+
+._usrstack      0x20000018      0x100 load address 0x080014c0
+                0x20000018                . = ALIGN (0x4)
+                0x20000018                _susrstack = .
+                0x20000118                . = (. + _Minimum_Stack_Size)
+ *fill*         0x20000018      0x100 00
+                0x20000118                . = ALIGN (0x4)
+                0x20000118                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x204
+ *(.comment)
+ .comment       0x00000000       0x2b FLASH_RUN/main.o
+ .comment       0x0000002b       0x2b FLASH_RUN/gpio.o
+ .comment       0x00000056       0x2b FLASH_RUN/adc.o
+ .comment       0x00000081       0x2b FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .comment       0x000000ac       0x2b FLASH_RUN/core_cm3.o
+ .comment       0x000000d7       0x2b FLASH_RUN/system_stm32f10x.o
+ .comment       0x00000102       0x2b FLASH_RUN/stm32f10x_adc.o
+ .comment       0x0000012d       0x2b FLASH_RUN/stm32f10x_gpio.o
+ .comment       0x00000158       0x2b FLASH_RUN/stm32f10x_rcc.o
+ .comment       0x00000183       0x2b FLASH_RUN/stm32f10x_pwr.o
+ .comment       0x000001ae       0x2b FLASH_RUN/stm32f10x_dma.o
+ .comment       0x000001d9       0x2b FLASH_RUN/misc.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x5f0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x58 FLASH_RUN/main.o
+ .debug_aranges
+                0x00000058       0x30 FLASH_RUN/gpio.o
+ .debug_aranges
+                0x00000088       0x28 FLASH_RUN/adc.o
+ .debug_aranges
+                0x000000b0       0x30 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_aranges
+                0x000000e0       0xc8 FLASH_RUN/core_cm3.o
+ .debug_aranges
+                0x000001a8       0x38 FLASH_RUN/system_stm32f10x.o
+ .debug_aranges
+                0x000001e0      0x138 FLASH_RUN/stm32f10x_adc.o
+ .debug_aranges
+                0x00000318       0xa8 FLASH_RUN/stm32f10x_gpio.o
+ .debug_aranges
+                0x000003c0      0x118 FLASH_RUN/stm32f10x_rcc.o
+ .debug_aranges
+                0x000004d8       0x70 FLASH_RUN/stm32f10x_pwr.o
+ .debug_aranges
+                0x00000548       0x68 FLASH_RUN/stm32f10x_dma.o
+ .debug_aranges
+                0x000005b0       0x40 FLASH_RUN/misc.o
+
+.debug_pubnames
+                0x00000000      0xd88
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x7c FLASH_RUN/main.o
+ .debug_pubnames
+                0x0000007c       0x3b FLASH_RUN/gpio.o
+ .debug_pubnames
+                0x000000b7       0x31 FLASH_RUN/adc.o
+ .debug_pubnames
+                0x000000e8       0x61 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_pubnames
+                0x00000149      0x159 FLASH_RUN/core_cm3.o
+ .debug_pubnames
+                0x000002a2       0x61 FLASH_RUN/system_stm32f10x.o
+ .debug_pubnames
+                0x00000303      0x401 FLASH_RUN/stm32f10x_adc.o
+ .debug_pubnames
+                0x00000704      0x19d FLASH_RUN/stm32f10x_gpio.o
+ .debug_pubnames
+                0x000008a1      0x2c4 FLASH_RUN/stm32f10x_rcc.o
+ .debug_pubnames
+                0x00000b65       0xcb FLASH_RUN/stm32f10x_pwr.o
+ .debug_pubnames
+                0x00000c30       0xcf FLASH_RUN/stm32f10x_dma.o
+ .debug_pubnames
+                0x00000cff       0x89 FLASH_RUN/misc.o
+
+.debug_info     0x00000000     0x3e2f
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x690 FLASH_RUN/main.o
+ .debug_info    0x00000690      0x225 FLASH_RUN/gpio.o
+ .debug_info    0x000008b5      0x3b4 FLASH_RUN/adc.o
+ .debug_info    0x00000c69      0x19d FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_info    0x00000e06      0x548 FLASH_RUN/core_cm3.o
+ .debug_info    0x0000134e      0x2c8 FLASH_RUN/system_stm32f10x.o
+ .debug_info    0x00001616      0xc07 FLASH_RUN/stm32f10x_adc.o
+ .debug_info    0x0000221d      0x705 FLASH_RUN/stm32f10x_gpio.o
+ .debug_info    0x00002922      0x8e3 FLASH_RUN/stm32f10x_rcc.o
+ .debug_info    0x00003205      0x2b7 FLASH_RUN/stm32f10x_pwr.o
+ .debug_info    0x000034bc      0x456 FLASH_RUN/stm32f10x_dma.o
+ .debug_info    0x00003912      0x51d FLASH_RUN/misc.o
+
+.debug_abbrev   0x00000000      0xf67
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1b1 FLASH_RUN/main.o
+ .debug_abbrev  0x000001b1       0xff FLASH_RUN/gpio.o
+ .debug_abbrev  0x000002b0      0x101 FLASH_RUN/adc.o
+ .debug_abbrev  0x000003b1       0xef FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_abbrev  0x000004a0       0xd7 FLASH_RUN/core_cm3.o
+ .debug_abbrev  0x00000577      0x14f FLASH_RUN/system_stm32f10x.o
+ .debug_abbrev  0x000006c6      0x17f FLASH_RUN/stm32f10x_adc.o
+ .debug_abbrev  0x00000845      0x1a2 FLASH_RUN/stm32f10x_gpio.o
+ .debug_abbrev  0x000009e7      0x19c FLASH_RUN/stm32f10x_rcc.o
+ .debug_abbrev  0x00000b83      0x14b FLASH_RUN/stm32f10x_pwr.o
+ .debug_abbrev  0x00000cce      0x159 FLASH_RUN/stm32f10x_dma.o
+ .debug_abbrev  0x00000e27      0x140 FLASH_RUN/misc.o
+
+.debug_line     0x00000000     0x1cf0
+ *(.debug_line)
+ .debug_line    0x00000000      0x1dd FLASH_RUN/main.o
+ .debug_line    0x000001dd      0x18e FLASH_RUN/gpio.o
+ .debug_line    0x0000036b      0x19f FLASH_RUN/adc.o
+ .debug_line    0x0000050a      0x129 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_line    0x00000633      0x272 FLASH_RUN/core_cm3.o
+ .debug_line    0x000008a5      0x1a3 FLASH_RUN/system_stm32f10x.o
+ .debug_line    0x00000a48      0x4b1 FLASH_RUN/stm32f10x_adc.o
+ .debug_line    0x00000ef9      0x335 FLASH_RUN/stm32f10x_gpio.o
+ .debug_line    0x0000122e      0x440 FLASH_RUN/stm32f10x_rcc.o
+ .debug_line    0x0000166e      0x22b FLASH_RUN/stm32f10x_pwr.o
+ .debug_line    0x00001899      0x27f FLASH_RUN/stm32f10x_dma.o
+ .debug_line    0x00001b18      0x1d8 FLASH_RUN/misc.o
+
+.debug_frame    0x00000000     0x1190
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xf4 FLASH_RUN/main.o
+ .debug_frame   0x000000f4       0x68 FLASH_RUN/gpio.o
+ .debug_frame   0x0000015c       0x4c FLASH_RUN/adc.o
+ .debug_frame   0x000001a8       0x70 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_frame   0x00000218      0x248 FLASH_RUN/core_cm3.o
+ .debug_frame   0x00000460       0x80 FLASH_RUN/system_stm32f10x.o
+ .debug_frame   0x000004e0      0x404 FLASH_RUN/stm32f10x_adc.o
+ .debug_frame   0x000008e4      0x20c FLASH_RUN/stm32f10x_gpio.o
+ .debug_frame   0x00000af0      0x394 FLASH_RUN/stm32f10x_rcc.o
+ .debug_frame   0x00000e84      0x148 FLASH_RUN/stm32f10x_pwr.o
+ .debug_frame   0x00000fcc      0x128 FLASH_RUN/stm32f10x_dma.o
+ .debug_frame   0x000010f4       0x9c FLASH_RUN/misc.o
+
+.debug_str      0x00000000     0x1947
+ *(.debug_str)
+ .debug_str     0x00000000      0x4af FLASH_RUN/main.o
+                                0x500 (size before relaxing)
+ .debug_str     0x000004af      0x14e FLASH_RUN/gpio.o
+                                0x241 (size before relaxing)
+ .debug_str     0x000005fd      0x1df FLASH_RUN/adc.o
+                                0x2de (size before relaxing)
+ .debug_str     0x000007dc       0xae FLASH_RUN/startup_stm32f10x_md_mthomas.o
+                                0x190 (size before relaxing)
+ .debug_str     0x0000088a      0x15e FLASH_RUN/core_cm3.o
+                                0x25a (size before relaxing)
+ .debug_str     0x000009e8      0x103 FLASH_RUN/system_stm32f10x.o
+                                0x206 (size before relaxing)
+ .debug_str     0x00000aeb      0x498 FLASH_RUN/stm32f10x_adc.o
+                                0x68c (size before relaxing)
+ .debug_str     0x00000f83      0x257 FLASH_RUN/stm32f10x_gpio.o
+                                0x49d (size before relaxing)
+ .debug_str     0x000011da      0x3e0 FLASH_RUN/stm32f10x_rcc.o
+                                0x596 (size before relaxing)
+ .debug_str     0x000015ba      0x10c FLASH_RUN/stm32f10x_pwr.o
+                                0x240 (size before relaxing)
+ .debug_str     0x000016c6      0x114 FLASH_RUN/stm32f10x_dma.o
+                                0x31b (size before relaxing)
+ .debug_str     0x000017da      0x16d FLASH_RUN/misc.o
+                                0x334 (size before relaxing)
+
+.debug_loc      0x00000000     0x1f40
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x170 FLASH_RUN/main.o
+ .debug_loc     0x00000170       0x8d FLASH_RUN/gpio.o
+ .debug_loc     0x000001fd       0x64 FLASH_RUN/adc.o
+ .debug_loc     0x00000261       0x99 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_loc     0x000002fa      0x3de FLASH_RUN/core_cm3.o
+ .debug_loc     0x000006d8       0xc4 FLASH_RUN/system_stm32f10x.o
+ .debug_loc     0x0000079c      0x7b0 FLASH_RUN/stm32f10x_adc.o
+ .debug_loc     0x00000f4c      0x3d2 FLASH_RUN/stm32f10x_gpio.o
+ .debug_loc     0x0000131e      0x6bc FLASH_RUN/stm32f10x_rcc.o
+ .debug_loc     0x000019da      0x22d FLASH_RUN/stm32f10x_pwr.o
+ .debug_loc     0x00001c07      0x226 FLASH_RUN/stm32f10x_dma.o
+ .debug_loc     0x00001e2d      0x113 FLASH_RUN/misc.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x590
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x50 FLASH_RUN/main.o
+ .debug_ranges  0x00000050       0x28 FLASH_RUN/gpio.o
+ .debug_ranges  0x00000078       0x20 FLASH_RUN/adc.o
+ .debug_ranges  0x00000098       0x28 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .debug_ranges  0x000000c0       0xc0 FLASH_RUN/core_cm3.o
+ .debug_ranges  0x00000180       0x30 FLASH_RUN/system_stm32f10x.o
+ .debug_ranges  0x000001b0      0x130 FLASH_RUN/stm32f10x_adc.o
+ .debug_ranges  0x000002e0       0xa0 FLASH_RUN/stm32f10x_gpio.o
+ .debug_ranges  0x00000380      0x110 FLASH_RUN/stm32f10x_rcc.o
+ .debug_ranges  0x00000490       0x68 FLASH_RUN/stm32f10x_pwr.o
+ .debug_ranges  0x000004f8       0x60 FLASH_RUN/stm32f10x_dma.o
+ .debug_ranges  0x00000558       0x38 FLASH_RUN/misc.o
+
+.ARM.attributes
+                0x00000000       0x31
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x31 FLASH_RUN/main.o
+ .ARM.attributes
+                0x00000031       0x31 FLASH_RUN/gpio.o
+ .ARM.attributes
+                0x00000062       0x31 FLASH_RUN/adc.o
+ .ARM.attributes
+                0x00000093       0x31 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ .ARM.attributes
+                0x000000c4       0x31 FLASH_RUN/core_cm3.o
+ .ARM.attributes
+                0x000000f5       0x31 FLASH_RUN/system_stm32f10x.o
+ .ARM.attributes
+                0x00000126       0x31 FLASH_RUN/stm32f10x_adc.o
+ .ARM.attributes
+                0x00000157       0x31 FLASH_RUN/stm32f10x_gpio.o
+ .ARM.attributes
+                0x00000188       0x31 FLASH_RUN/stm32f10x_rcc.o
+ .ARM.attributes
+                0x000001b9       0x31 FLASH_RUN/stm32f10x_pwr.o
+ .ARM.attributes
+                0x000001ea       0x31 FLASH_RUN/stm32f10x_dma.o
+ .ARM.attributes
+                0x0000021b       0x31 FLASH_RUN/misc.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+                0x00000400                __Stack_Size = 0x400
+                0x00000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x20000c00                __Stack_Init = (_estack - __Stack_Size)
+                0x20000c00                PROVIDE (_Stack_Init, __Stack_Init)
+OUTPUT(FLASH_RUN/project.elf elf32-littlearm)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC1_2_IRQHandler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+ADC_AnalogWatchdogCmd                             FLASH_RUN/stm32f10x_adc.o
+ADC_AnalogWatchdogSingleChannelConfig             FLASH_RUN/stm32f10x_adc.o
+ADC_AnalogWatchdogThresholdsConfig                FLASH_RUN/stm32f10x_adc.o
+ADC_AutoInjectedConvCmd                           FLASH_RUN/stm32f10x_adc.o
+ADC_ClearFlag                                     FLASH_RUN/stm32f10x_adc.o
+ADC_ClearITPendingBit                             FLASH_RUN/stm32f10x_adc.o
+ADC_Cmd                                           FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_DMACmd                                        FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_DeInit                                        FLASH_RUN/stm32f10x_adc.o
+ADC_DiscModeChannelCountConfig                    FLASH_RUN/stm32f10x_adc.o
+ADC_DiscModeCmd                                   FLASH_RUN/stm32f10x_adc.o
+ADC_ExternalTrigConvCmd                           FLASH_RUN/stm32f10x_adc.o
+ADC_ExternalTrigInjectedConvCmd                   FLASH_RUN/stm32f10x_adc.o
+ADC_ExternalTrigInjectedConvConfig                FLASH_RUN/stm32f10x_adc.o
+ADC_GetCalibrationStatus                          FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_GetConversionValue                            FLASH_RUN/stm32f10x_adc.o
+ADC_GetDualModeConversionValue                    FLASH_RUN/stm32f10x_adc.o
+ADC_GetFlagStatus                                 FLASH_RUN/stm32f10x_adc.o
+ADC_GetITStatus                                   FLASH_RUN/stm32f10x_adc.o
+ADC_GetInjectedConversionValue                    FLASH_RUN/stm32f10x_adc.o
+ADC_GetResetCalibrationStatus                     FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_GetSoftwareStartConvStatus                    FLASH_RUN/stm32f10x_adc.o
+ADC_GetSoftwareStartInjectedConvCmdStatus         FLASH_RUN/stm32f10x_adc.o
+ADC_ITConfig                                      FLASH_RUN/stm32f10x_adc.o
+ADC_Init                                          FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_InjectedChannelConfig                         FLASH_RUN/stm32f10x_adc.o
+ADC_InjectedDiscModeCmd                           FLASH_RUN/stm32f10x_adc.o
+ADC_InjectedSequencerLengthConfig                 FLASH_RUN/stm32f10x_adc.o
+ADC_RegularChannelConfig                          FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_ResetCalibration                              FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_SetInjectedOffset                             FLASH_RUN/stm32f10x_adc.o
+ADC_SoftwareStartConvCmd                          FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_SoftwareStartInjectedConvCmd                  FLASH_RUN/stm32f10x_adc.o
+ADC_StartCalibration                              FLASH_RUN/stm32f10x_adc.o
+                                                  FLASH_RUN/adc.o
+ADC_StructInit                                    FLASH_RUN/stm32f10x_adc.o
+ADC_TempSensorVrefintCmd                          FLASH_RUN/stm32f10x_adc.o
+AHBPrescTable                                     FLASH_RUN/system_stm32f10x.o
+BusFault_Handler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+CAN1_RX1_IRQHandler                               FLASH_RUN/startup_stm32f10x_md_mthomas.o
+CAN1_SCE_IRQHandler                               FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel1_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel2_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel3_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel4_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel5_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel6_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA1_Channel7_IRQHandler                          FLASH_RUN/startup_stm32f10x_md_mthomas.o
+DMA_ClearFlag                                     FLASH_RUN/stm32f10x_dma.o
+DMA_ClearITPendingBit                             FLASH_RUN/stm32f10x_dma.o
+DMA_Cmd                                           FLASH_RUN/stm32f10x_dma.o
+                                                  FLASH_RUN/adc.o
+DMA_DeInit                                        FLASH_RUN/stm32f10x_dma.o
+                                                  FLASH_RUN/adc.o
+DMA_GetCurrDataCounter                            FLASH_RUN/stm32f10x_dma.o
+DMA_GetFlagStatus                                 FLASH_RUN/stm32f10x_dma.o
+DMA_GetITStatus                                   FLASH_RUN/stm32f10x_dma.o
+DMA_ITConfig                                      FLASH_RUN/stm32f10x_dma.o
+DMA_Init                                          FLASH_RUN/stm32f10x_dma.o
+                                                  FLASH_RUN/adc.o
+DMA_StructInit                                    FLASH_RUN/stm32f10x_dma.o
+DebugMon_Handler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+Default_Handler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI0_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI15_10_IRQHandler                              FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI1_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI2_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI3_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI4_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+EXTI9_5_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+FLASH_IRQHandler                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+GPIO_AFIODeInit                                   FLASH_RUN/stm32f10x_gpio.o
+GPIO_DeInit                                       FLASH_RUN/stm32f10x_gpio.o
+GPIO_ETH_MediaInterfaceConfig                     FLASH_RUN/stm32f10x_gpio.o
+GPIO_EXTILineConfig                               FLASH_RUN/stm32f10x_gpio.o
+GPIO_EventOutputCmd                               FLASH_RUN/stm32f10x_gpio.o
+GPIO_EventOutputConfig                            FLASH_RUN/stm32f10x_gpio.o
+GPIO_Init                                         FLASH_RUN/stm32f10x_gpio.o
+                                                  FLASH_RUN/gpio.o
+GPIO_PinLockConfig                                FLASH_RUN/stm32f10x_gpio.o
+GPIO_PinRemapConfig                               FLASH_RUN/stm32f10x_gpio.o
+GPIO_ReadInputData                                FLASH_RUN/stm32f10x_gpio.o
+GPIO_ReadInputDataBit                             FLASH_RUN/stm32f10x_gpio.o
+GPIO_ReadOutputData                               FLASH_RUN/stm32f10x_gpio.o
+GPIO_ReadOutputDataBit                            FLASH_RUN/stm32f10x_gpio.o
+GPIO_ResetBits                                    FLASH_RUN/stm32f10x_gpio.o
+                                                  FLASH_RUN/gpio.o
+                                                  FLASH_RUN/main.o
+GPIO_SetBits                                      FLASH_RUN/stm32f10x_gpio.o
+                                                  FLASH_RUN/gpio.o
+                                                  FLASH_RUN/main.o
+GPIO_StructInit                                   FLASH_RUN/stm32f10x_gpio.o
+GPIO_Write                                        FLASH_RUN/stm32f10x_gpio.o
+GPIO_WriteBit                                     FLASH_RUN/stm32f10x_gpio.o
+HardFault_Handler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+I2C1_ER_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+I2C1_EV_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+I2C2_ER_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+I2C2_EV_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+MMI_Handler                                       FLASH_RUN/startup_stm32f10x_md_mthomas.o
+MemManage_Handler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+NMI_Handler                                       FLASH_RUN/startup_stm32f10x_md_mthomas.o
+NVIC_Init                                         FLASH_RUN/misc.o
+NVIC_PriorityGroupConfig                          FLASH_RUN/misc.o
+NVIC_SetVectorTable                               FLASH_RUN/misc.o
+                                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+NVIC_SystemLPConfig                               FLASH_RUN/misc.o
+PVD_IRQHandler                                    FLASH_RUN/startup_stm32f10x_md_mthomas.o
+PWR_BackupAccessCmd                               FLASH_RUN/stm32f10x_pwr.o
+PWR_ClearFlag                                     FLASH_RUN/stm32f10x_pwr.o
+PWR_DeInit                                        FLASH_RUN/stm32f10x_pwr.o
+PWR_EnterSTANDBYMode                              FLASH_RUN/stm32f10x_pwr.o
+PWR_EnterSTOPMode                                 FLASH_RUN/stm32f10x_pwr.o
+PWR_GetFlagStatus                                 FLASH_RUN/stm32f10x_pwr.o
+PWR_PVDCmd                                        FLASH_RUN/stm32f10x_pwr.o
+PWR_PVDLevelConfig                                FLASH_RUN/stm32f10x_pwr.o
+PWR_WakeUpPinCmd                                  FLASH_RUN/stm32f10x_pwr.o
+PendSV_Handler                                    FLASH_RUN/startup_stm32f10x_md_mthomas.o
+RCC_ADCCLKConfig                                  FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/adc.o
+RCC_AHBPeriphClockCmd                             FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/adc.o
+RCC_APB1PeriphClockCmd                            FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/gpio.o
+RCC_APB1PeriphResetCmd                            FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/stm32f10x_pwr.o
+RCC_APB2PeriphClockCmd                            FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/gpio.o
+RCC_APB2PeriphResetCmd                            FLASH_RUN/stm32f10x_rcc.o
+                                                  FLASH_RUN/stm32f10x_gpio.o
+                                                  FLASH_RUN/stm32f10x_adc.o
+RCC_AdjustHSICalibrationValue                     FLASH_RUN/stm32f10x_rcc.o
+RCC_BackupResetCmd                                FLASH_RUN/stm32f10x_rcc.o
+RCC_ClearFlag                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_ClearITPendingBit                             FLASH_RUN/stm32f10x_rcc.o
+RCC_ClockSecuritySystemCmd                        FLASH_RUN/stm32f10x_rcc.o
+RCC_DeInit                                        FLASH_RUN/stm32f10x_rcc.o
+RCC_GetClocksFreq                                 FLASH_RUN/stm32f10x_rcc.o
+RCC_GetFlagStatus                                 FLASH_RUN/stm32f10x_rcc.o
+RCC_GetITStatus                                   FLASH_RUN/stm32f10x_rcc.o
+RCC_GetSYSCLKSource                               FLASH_RUN/stm32f10x_rcc.o
+RCC_HCLKConfig                                    FLASH_RUN/stm32f10x_rcc.o
+RCC_HSEConfig                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_HSICmd                                        FLASH_RUN/stm32f10x_rcc.o
+RCC_IRQHandler                                    FLASH_RUN/startup_stm32f10x_md_mthomas.o
+RCC_ITConfig                                      FLASH_RUN/stm32f10x_rcc.o
+RCC_LSEConfig                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_LSICmd                                        FLASH_RUN/stm32f10x_rcc.o
+RCC_MCOConfig                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_PCLK1Config                                   FLASH_RUN/stm32f10x_rcc.o
+RCC_PCLK2Config                                   FLASH_RUN/stm32f10x_rcc.o
+RCC_PLLCmd                                        FLASH_RUN/stm32f10x_rcc.o
+RCC_PLLConfig                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_RTCCLKCmd                                     FLASH_RUN/stm32f10x_rcc.o
+RCC_RTCCLKConfig                                  FLASH_RUN/stm32f10x_rcc.o
+RCC_SYSCLKConfig                                  FLASH_RUN/stm32f10x_rcc.o
+RCC_USBCLKConfig                                  FLASH_RUN/stm32f10x_rcc.o
+RCC_WaitForHSEStartUp                             FLASH_RUN/stm32f10x_rcc.o
+RTCAlarm_IRQHandler                               FLASH_RUN/startup_stm32f10x_md_mthomas.o
+RTC_IRQHandler                                    FLASH_RUN/startup_stm32f10x_md_mthomas.o
+Reset_Handler                                     FLASH_RUN/startup_stm32f10x_md_mthomas.o
+SPI1_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+SPI2_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+SVC_Handler                                       FLASH_RUN/startup_stm32f10x_md_mthomas.o
+SysTick_CLKSourceConfig                           FLASH_RUN/misc.o
+SysTick_Handler                                   FLASH_RUN/main.o
+SystemCoreClock                                   FLASH_RUN/system_stm32f10x.o
+SystemCoreClockUpdate                             FLASH_RUN/system_stm32f10x.o
+SystemInit                                        FLASH_RUN/system_stm32f10x.o
+                                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TAMPER_IRQHandler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM1_BRK_IRQHandler                               FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM1_CC_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM1_TRG_COM_IRQHandler                           FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM1_UP_IRQHandler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM2_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM3_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+TIM4_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USART1_IRQHandler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USART2_IRQHandler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USART3_IRQHandler                                 FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USBWakeUp_IRQHandler                              FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USB_HP_CAN1_TX_IRQHandler                         FLASH_RUN/startup_stm32f10x_md_mthomas.o
+USB_LP_CAN1_RX0_IRQHandler                        FLASH_RUN/startup_stm32f10x_md_mthomas.o
+UsageFault_Handler                                FLASH_RUN/startup_stm32f10x_md_mthomas.o
+WWDG_IRQHandler                                   FLASH_RUN/startup_stm32f10x_md_mthomas.o
+__Init_Data_and_BSS                               FLASH_RUN/startup_stm32f10x_md_mthomas.o
+__LDREXB                                          FLASH_RUN/core_cm3.o
+__LDREXH                                          FLASH_RUN/core_cm3.o
+__LDREXW                                          FLASH_RUN/core_cm3.o
+__RBIT                                            FLASH_RUN/core_cm3.o
+__REV                                             FLASH_RUN/core_cm3.o
+__REV16                                           FLASH_RUN/core_cm3.o
+__REVSH                                           FLASH_RUN/core_cm3.o
+__STREXB                                          FLASH_RUN/core_cm3.o
+__STREXH                                          FLASH_RUN/core_cm3.o
+__STREXW                                          FLASH_RUN/core_cm3.o
+__get_BASEPRI                                     FLASH_RUN/core_cm3.o
+__get_CONTROL                                     FLASH_RUN/core_cm3.o
+__get_FAULTMASK                                   FLASH_RUN/core_cm3.o
+__get_MSP                                         FLASH_RUN/core_cm3.o
+__get_PRIMASK                                     FLASH_RUN/core_cm3.o
+__get_PSP                                         FLASH_RUN/core_cm3.o
+__set_BASEPRI                                     FLASH_RUN/core_cm3.o
+__set_CONTROL                                     FLASH_RUN/core_cm3.o
+__set_FAULTMASK                                   FLASH_RUN/core_cm3.o
+__set_MSP                                         FLASH_RUN/core_cm3.o
+__set_PRIMASK                                     FLASH_RUN/core_cm3.o
+__set_PSP                                         FLASH_RUN/core_cm3.o
+_ebss                                             FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_edata                                            FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_estack                                           FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_isr_vectorsflash_offs                            FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_sbss                                             FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_sdata                                            FLASH_RUN/startup_stm32f10x_md_mthomas.o
+_sidata                                           FLASH_RUN/startup_stm32f10x_md_mthomas.o
+adc_get_value                                     FLASH_RUN/adc.o
+                                                  FLASH_RUN/main.o
+adc_init                                          FLASH_RUN/adc.o
+                                                  FLASH_RUN/main.o
+debug_off                                         FLASH_RUN/gpio.o
+debug_on                                          FLASH_RUN/gpio.o
+ev_state                                          FLASH_RUN/main.o
+g_pfnVectors                                      FLASH_RUN/startup_stm32f10x_md_mthomas.o
+gpio_init                                         FLASH_RUN/gpio.o
+                                                  FLASH_RUN/main.o
+initialize                                        FLASH_RUN/main.o
+main                                              FLASH_RUN/main.o
+                                                  FLASH_RUN/startup_stm32f10x_md_mthomas.o
+manage_cp                                         FLASH_RUN/main.o
+manage_ev_state                                   FLASH_RUN/main.o
+manage_led                                        FLASH_RUN/main.o

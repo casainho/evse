@@ -1,0 +1,342 @@
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"adc.c"
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.bss.adc_value,"aw",%nobits
+  24              		.align	2
+  27              	adc_value:
+  28 0000 00000000 		.space	4
+  29              		.section	.text.adc_init,"ax",%progbits
+  30              		.align	2
+  31              		.global	adc_init
+  32              		.thumb
+  33              		.thumb_func
+  35              	adc_init:
+  36              	.LFB29:
+  37              		.file 1 "adc.c"
+   1:adc.c         **** /*
+   2:adc.c         ****  * EBike Smart Controller
+   3:adc.c         ****  *
+   4:adc.c         ****  * Copyright (C) Jorge Pinto aka Casainho, 2012, 2013.
+   5:adc.c         ****  *
+   6:adc.c         ****  *   casainho [at] gmail [dot] com
+   7:adc.c         ****  *     www.casainho.net
+   8:adc.c         ****  *
+   9:adc.c         ****  * Released under the GPL License, Version 3
+  10:adc.c         ****  */
+  11:adc.c         **** 
+  12:adc.c         **** #include "stm32f10x_rcc.h"
+  13:adc.c         **** #include "stm32f10x_gpio.h"
+  14:adc.c         **** #include "stm32f10x_adc.h"
+  15:adc.c         **** #include "stm32f10x_dma.h"
+  16:adc.c         **** 
+  17:adc.c         **** static unsigned int adc_value = 0;
+  18:adc.c         **** 
+  19:adc.c         **** void adc_init (void)
+  20:adc.c         **** {
+  38              		.loc 1 20 0
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 64
+  41              		@ frame_needed = 1, uses_anonymous_args = 0
+  42 0000 80B5     		push	{r7, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 8
+  45 0002 90B0     		sub	sp, sp, #64
+  46              	.LCFI1:
+  47              		.cfi_def_cfa_offset 72
+  48 0004 00AF     		add	r7, sp, #0
+  49              		.cfi_offset 14, -4
+  50              		.cfi_offset 7, -8
+  51              	.LCFI2:
+  52              		.cfi_def_cfa_register 7
+  21:adc.c         ****   /* ADCCLK = PCLK2/8 */
+  22:adc.c         ****   RCC_ADCCLKConfig(RCC_PCLK2_Div8);
+  53              		.loc 1 22 0
+  54 0006 4FF44040 		mov	r0, #49152
+  55 000a 40F20003 		movw	r3, #:lower16:RCC_ADCCLKConfig
+  56 000e C0F20003 		movt	r3, #:upper16:RCC_ADCCLKConfig
+  57 0012 9847     		blx	r3
+  23:adc.c         **** 
+  24:adc.c         ****   /* Enable DMA1 clock */
+  25:adc.c         ****   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
+  58              		.loc 1 25 0
+  59 0014 4FF00100 		mov	r0, #1
+  60 0018 4FF00101 		mov	r1, #1
+  61 001c 40F20003 		movw	r3, #:lower16:RCC_AHBPeriphClockCmd
+  62 0020 C0F20003 		movt	r3, #:upper16:RCC_AHBPeriphClockCmd
+  63 0024 9847     		blx	r3
+  26:adc.c         **** 
+  27:adc.c         ****   DMA_InitTypeDef DMA_InitStructure;
+  28:adc.c         ****   /* DMA1 channel1 configuration ----------------------------------------------*/
+  29:adc.c         ****   DMA_DeInit(DMA1_Channel1);
+  64              		.loc 1 29 0
+  65 0026 40F20800 		movw	r0, #:lower16:1073872904
+  66 002a C4F20200 		movt	r0, #:upper16:1073872904
+  67 002e 40F20003 		movw	r3, #:lower16:DMA_DeInit
+  68 0032 C0F20003 		movt	r3, #:upper16:DMA_DeInit
+  69 0036 9847     		blx	r3
+  30:adc.c         ****   DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t) &(ADC1->DR);
+  70              		.loc 1 30 0
+  71 0038 42F24C43 		movw	r3, #:lower16:1073816652
+  72 003c C4F20103 		movt	r3, #:upper16:1073816652
+  73 0040 7B61     		str	r3, [r7, #20]
+  31:adc.c         ****   DMA_InitStructure.DMA_MemoryBaseAddr = (uint32_t) &adc_value;
+  74              		.loc 1 31 0
+  75 0042 40F20003 		movw	r3, #:lower16:adc_value
+  76 0046 C0F20003 		movt	r3, #:upper16:adc_value
+  77 004a BB61     		str	r3, [r7, #24]
+  32:adc.c         ****   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
+  78              		.loc 1 32 0
+  79 004c 4FF00003 		mov	r3, #0
+  80 0050 FB61     		str	r3, [r7, #28]
+  33:adc.c         ****   DMA_InitStructure.DMA_BufferSize = 1;
+  81              		.loc 1 33 0
+  82 0052 4FF00103 		mov	r3, #1
+  83 0056 3B62     		str	r3, [r7, #32]
+  34:adc.c         ****   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+  84              		.loc 1 34 0
+  85 0058 4FF00003 		mov	r3, #0
+  86 005c 7B62     		str	r3, [r7, #36]
+  35:adc.c         ****   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Disable;
+  87              		.loc 1 35 0
+  88 005e 4FF00003 		mov	r3, #0
+  89 0062 BB62     		str	r3, [r7, #40]
+  36:adc.c         ****   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;
+  90              		.loc 1 36 0
+  91 0064 4FF48073 		mov	r3, #256
+  92 0068 FB62     		str	r3, [r7, #44]
+  37:adc.c         ****   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Word;
+  93              		.loc 1 37 0
+  94 006a 4FF40063 		mov	r3, #2048
+  95 006e 3B63     		str	r3, [r7, #48]
+  38:adc.c         ****   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
+  96              		.loc 1 38 0
+  97 0070 4FF02003 		mov	r3, #32
+  98 0074 7B63     		str	r3, [r7, #52]
+  39:adc.c         ****   DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+  99              		.loc 1 39 0
+ 100 0076 4FF40053 		mov	r3, #8192
+ 101 007a BB63     		str	r3, [r7, #56]
+  40:adc.c         ****   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
+ 102              		.loc 1 40 0
+ 103 007c 4FF00003 		mov	r3, #0
+ 104 0080 FB63     		str	r3, [r7, #60]
+  41:adc.c         ****   DMA_Init(DMA1_Channel1, &DMA_InitStructure);
+ 105              		.loc 1 41 0
+ 106 0082 07F11403 		add	r3, r7, #20
+ 107 0086 40F20800 		movw	r0, #:lower16:1073872904
+ 108 008a C4F20200 		movt	r0, #:upper16:1073872904
+ 109 008e 1946     		mov	r1, r3
+ 110 0090 40F20003 		movw	r3, #:lower16:DMA_Init
+ 111 0094 C0F20003 		movt	r3, #:upper16:DMA_Init
+ 112 0098 9847     		blx	r3
+  42:adc.c         **** 
+  43:adc.c         ****   /* Enable DMA1 channel1 */
+  44:adc.c         ****   DMA_Cmd(DMA1_Channel1, ENABLE);
+ 113              		.loc 1 44 0
+ 114 009a 40F20800 		movw	r0, #:lower16:1073872904
+ 115 009e C4F20200 		movt	r0, #:upper16:1073872904
+ 116 00a2 4FF00101 		mov	r1, #1
+ 117 00a6 40F20003 		movw	r3, #:lower16:DMA_Cmd
+ 118 00aa C0F20003 		movt	r3, #:upper16:DMA_Cmd
+ 119 00ae 9847     		blx	r3
+  45:adc.c         **** 
+  46:adc.c         ****   ADC_InitTypeDef ADC_InitStructure;
+  47:adc.c         ****   /* ADC1 configuration ------------------------------------------------------*/
+  48:adc.c         ****   ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
+ 120              		.loc 1 48 0
+ 121 00b0 4FF00003 		mov	r3, #0
+ 122 00b4 3B60     		str	r3, [r7, #0]
+  49:adc.c         ****   ADC_InitStructure.ADC_ScanConvMode = ENABLE;
+ 123              		.loc 1 49 0
+ 124 00b6 4FF00103 		mov	r3, #1
+ 125 00ba 3B71     		strb	r3, [r7, #4]
+  50:adc.c         ****   ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
+ 126              		.loc 1 50 0
+ 127 00bc 4FF00103 		mov	r3, #1
+ 128 00c0 7B71     		strb	r3, [r7, #5]
+  51:adc.c         ****   ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
+ 129              		.loc 1 51 0
+ 130 00c2 4FF46023 		mov	r3, #917504
+ 131 00c6 BB60     		str	r3, [r7, #8]
+  52:adc.c         ****   ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
+ 132              		.loc 1 52 0
+ 133 00c8 4FF00003 		mov	r3, #0
+ 134 00cc FB60     		str	r3, [r7, #12]
+  53:adc.c         ****   ADC_InitStructure.ADC_NbrOfChannel = 1;
+ 135              		.loc 1 53 0
+ 136 00ce 4FF00103 		mov	r3, #1
+ 137 00d2 3B74     		strb	r3, [r7, #16]
+  54:adc.c         ****   ADC_Init(ADC1, &ADC_InitStructure);
+ 138              		.loc 1 54 0
+ 139 00d4 3B46     		mov	r3, r7
+ 140 00d6 42F20040 		movw	r0, #:lower16:1073816576
+ 141 00da C4F20100 		movt	r0, #:upper16:1073816576
+ 142 00de 1946     		mov	r1, r3
+ 143 00e0 40F20003 		movw	r3, #:lower16:ADC_Init
+ 144 00e4 C0F20003 		movt	r3, #:upper16:ADC_Init
+ 145 00e8 9847     		blx	r3
+  55:adc.c         **** 
+  56:adc.c         ****   /* ADC1 regular channel0 configuration */
+  57:adc.c         ****   ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_55Cycles5);
+ 146              		.loc 1 57 0
+ 147 00ea 42F20040 		movw	r0, #:lower16:1073816576
+ 148 00ee C4F20100 		movt	r0, #:upper16:1073816576
+ 149 00f2 4FF00001 		mov	r1, #0
+ 150 00f6 4FF00102 		mov	r2, #1
+ 151 00fa 4FF00503 		mov	r3, #5
+ 152 00fe 40F2000C 		movw	ip, #:lower16:ADC_RegularChannelConfig
+ 153 0102 C0F2000C 		movt	ip, #:upper16:ADC_RegularChannelConfig
+ 154 0106 E047     		blx	ip
+  58:adc.c         **** 
+  59:adc.c         ****   /* Enable ADC1 DMA */
+  60:adc.c         ****   ADC_DMACmd(ADC1, ENABLE);
+ 155              		.loc 1 60 0
+ 156 0108 42F20040 		movw	r0, #:lower16:1073816576
+ 157 010c C4F20100 		movt	r0, #:upper16:1073816576
+ 158 0110 4FF00101 		mov	r1, #1
+ 159 0114 40F20003 		movw	r3, #:lower16:ADC_DMACmd
+ 160 0118 C0F20003 		movt	r3, #:upper16:ADC_DMACmd
+ 161 011c 9847     		blx	r3
+  61:adc.c         **** 
+  62:adc.c         ****   /* Enable ADC1 */
+  63:adc.c         ****   ADC_Cmd(ADC1, ENABLE);
+ 162              		.loc 1 63 0
+ 163 011e 42F20040 		movw	r0, #:lower16:1073816576
+ 164 0122 C4F20100 		movt	r0, #:upper16:1073816576
+ 165 0126 4FF00101 		mov	r1, #1
+ 166 012a 40F20003 		movw	r3, #:lower16:ADC_Cmd
+ 167 012e C0F20003 		movt	r3, #:upper16:ADC_Cmd
+ 168 0132 9847     		blx	r3
+  64:adc.c         **** 
+  65:adc.c         ****   /* Enable ADC1 reset calibration register */
+  66:adc.c         ****   ADC_ResetCalibration(ADC1);
+ 169              		.loc 1 66 0
+ 170 0134 42F20040 		movw	r0, #:lower16:1073816576
+ 171 0138 C4F20100 		movt	r0, #:upper16:1073816576
+ 172 013c 40F20003 		movw	r3, #:lower16:ADC_ResetCalibration
+ 173 0140 C0F20003 		movt	r3, #:upper16:ADC_ResetCalibration
+ 174 0144 9847     		blx	r3
+ 175              	.L2:
+  67:adc.c         ****   /* Check the end of ADC1 reset calibration register */
+  68:adc.c         ****   while(ADC_GetResetCalibrationStatus(ADC1));
+ 176              		.loc 1 68 0
+ 177 0146 42F20040 		movw	r0, #:lower16:1073816576
+ 178 014a C4F20100 		movt	r0, #:upper16:1073816576
+ 179 014e 40F20003 		movw	r3, #:lower16:ADC_GetResetCalibrationStatus
+ 180 0152 C0F20003 		movt	r3, #:upper16:ADC_GetResetCalibrationStatus
+ 181 0156 9847     		blx	r3
+ 182 0158 0346     		mov	r3, r0
+ 183 015a 002B     		cmp	r3, #0
+ 184 015c F3D1     		bne	.L2
+  69:adc.c         **** 
+  70:adc.c         ****   /* Start ADC1 calibration */
+  71:adc.c         ****   ADC_StartCalibration(ADC1);
+ 185              		.loc 1 71 0
+ 186 015e 42F20040 		movw	r0, #:lower16:1073816576
+ 187 0162 C4F20100 		movt	r0, #:upper16:1073816576
+ 188 0166 40F20003 		movw	r3, #:lower16:ADC_StartCalibration
+ 189 016a C0F20003 		movt	r3, #:upper16:ADC_StartCalibration
+ 190 016e 9847     		blx	r3
+ 191              	.L3:
+  72:adc.c         ****   /* Check the end of ADC1 calibration */
+  73:adc.c         ****   while(ADC_GetCalibrationStatus(ADC1));
+ 192              		.loc 1 73 0
+ 193 0170 42F20040 		movw	r0, #:lower16:1073816576
+ 194 0174 C4F20100 		movt	r0, #:upper16:1073816576
+ 195 0178 40F20003 		movw	r3, #:lower16:ADC_GetCalibrationStatus
+ 196 017c C0F20003 		movt	r3, #:upper16:ADC_GetCalibrationStatus
+ 197 0180 9847     		blx	r3
+ 198 0182 0346     		mov	r3, r0
+ 199 0184 002B     		cmp	r3, #0
+ 200 0186 F3D1     		bne	.L3
+  74:adc.c         **** 
+  75:adc.c         ****   /* Start ADC1 Software Conversion */
+  76:adc.c         ****   ADC_SoftwareStartConvCmd(ADC1, ENABLE);
+ 201              		.loc 1 76 0
+ 202 0188 42F20040 		movw	r0, #:lower16:1073816576
+ 203 018c C4F20100 		movt	r0, #:upper16:1073816576
+ 204 0190 4FF00101 		mov	r1, #1
+ 205 0194 40F20003 		movw	r3, #:lower16:ADC_SoftwareStartConvCmd
+ 206 0198 C0F20003 		movt	r3, #:upper16:ADC_SoftwareStartConvCmd
+ 207 019c 9847     		blx	r3
+  77:adc.c         **** }
+ 208              		.loc 1 77 0
+ 209 019e 07F14007 		add	r7, r7, #64
+ 210 01a2 BD46     		mov	sp, r7
+ 211 01a4 80BD     		pop	{r7, pc}
+ 212              		.cfi_endproc
+ 213              	.LFE29:
+ 215 01a6 00BF     		.section	.text.adc_get_value,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	adc_get_value
+ 218              		.thumb
+ 219              		.thumb_func
+ 221              	adc_get_value:
+ 222              	.LFB30:
+  78:adc.c         **** 
+  79:adc.c         **** unsigned int adc_get_value (void)
+  80:adc.c         **** {
+ 223              		.loc 1 80 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 1, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
+ 228 0000 80B4     		push	{r7}
+ 229              	.LCFI3:
+ 230              		.cfi_def_cfa_offset 4
+ 231 0002 00AF     		add	r7, sp, #0
+ 232              		.cfi_offset 7, -4
+ 233              	.LCFI4:
+ 234              		.cfi_def_cfa_register 7
+  81:adc.c         ****   return adc_value;
+ 235              		.loc 1 81 0
+ 236 0004 40F20003 		movw	r3, #:lower16:adc_value
+ 237 0008 C0F20003 		movt	r3, #:upper16:adc_value
+ 238 000c 1B68     		ldr	r3, [r3, #0]
+  82:adc.c         **** }
+ 239              		.loc 1 82 0
+ 240 000e 1846     		mov	r0, r3
+ 241 0010 BD46     		mov	sp, r7
+ 242 0012 80BC     		pop	{r7}
+ 243 0014 7047     		bx	lr
+ 244              		.cfi_endproc
+ 245              	.LFE30:
+ 247 0016 00BF     		.text
+ 248              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc.c
+     /tmp/cc7Y0Qvf.s:24     .bss.adc_value:00000000 $d
+     /tmp/cc7Y0Qvf.s:27     .bss.adc_value:00000000 adc_value
+     /tmp/cc7Y0Qvf.s:30     .text.adc_init:00000000 $t
+     /tmp/cc7Y0Qvf.s:35     .text.adc_init:00000000 adc_init
+     /tmp/cc7Y0Qvf.s:216    .text.adc_get_value:00000000 $t
+     /tmp/cc7Y0Qvf.s:221    .text.adc_get_value:00000000 adc_get_value
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+RCC_ADCCLKConfig
+RCC_AHBPeriphClockCmd
+DMA_DeInit
+DMA_Init
+DMA_Cmd
+ADC_Init
+ADC_RegularChannelConfig
+ADC_DMACmd
+ADC_Cmd
+ADC_ResetCalibration
+ADC_GetResetCalibrationStatus
+ADC_StartCalibration
+ADC_GetCalibrationStatus
+ADC_SoftwareStartConvCmd

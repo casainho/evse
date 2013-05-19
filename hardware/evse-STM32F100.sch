@@ -1,0 +1,174 @@
+EESchema Schematic File Version 2  date Sáb 18 Mai 2013 18:23:21 WEST
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:evse-STM32F100-cache
+EELAYER 24 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "noname.sch"
+Date "18 may 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NPN Q1
+U 1 1 519565A2
+P 6450 3250
+F 0 "Q1" H 6450 3100 50  0000 R CNN
+F 1 "BC817" H 6450 3400 50  0000 R CNN
+F 2 "~" H 6450 3250 60  0000 C CNN
+F 3 "~" H 6450 3250 60  0000 C CNN
+	1    6450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 519565B1
+P 5850 3250
+F 0 "R1" V 5930 3250 40  0000 C CNN
+F 1 "470R" V 5857 3251 40  0000 C CNN
+F 2 "~" V 5780 3250 30  0000 C CNN
+F 3 "~" H 5850 3250 30  0000 C CNN
+	1    5850 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 519565BE
+P 6550 2650
+F 0 "R2" V 6630 2650 40  0000 C CNN
+F 1 "1k" V 6557 2651 40  0000 C CNN
+F 2 "~" V 6480 2650 30  0000 C CNN
+F 3 "~" H 6550 2650 30  0000 C CNN
+	1    6550 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 519565CB
+P 6550 3600
+F 0 "#PWR2" H 6550 3600 30  0001 C CNN
+F 1 "GND" H 6550 3530 30  0001 C CNN
+F 2 "" H 6550 3600 60  0000 C CNN
+F 3 "" H 6550 3600 60  0000 C CNN
+	1    6550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR1
+U 1 1 519565EF
+P 6550 2300
+F 0 "#PWR1" H 6550 2250 20  0001 C CNN
+F 1 "+12V" H 6550 2400 30  0000 C CNN
+F 2 "" H 6550 2300 60  0000 C CNN
+F 3 "" H 6550 2300 60  0000 C CNN
+	1    6550 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3450 6550 3600
+Wire Wire Line
+	6100 3250 6250 3250
+Wire Wire Line
+	6550 2900 6550 2950
+Wire Wire Line
+	6550 2950 6550 3050
+Wire Wire Line
+	6550 2300 6550 2400
+Wire Wire Line
+	6550 2950 7150 2950
+Wire Wire Line
+	7150 2950 7750 2950
+Connection ~ 6550 2950
+Wire Wire Line
+	5600 3250 4800 3250
+Text Label 7550 2950 0    60   ~ 0
+pilot signal
+Text Label 4800 3250 0    60   ~ 0
+PA8 (IO)
+$Comp
+L R R3
+U 1 1 519567ED
+P 7150 3350
+F 0 "R3" V 7230 3350 40  0000 C CNN
+F 1 "100k" V 7157 3351 40  0000 C CNN
+F 2 "~" V 7080 3350 30  0000 C CNN
+F 3 "~" H 7150 3350 30  0000 C CNN
+	1    7150 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7150 3100 7150 2950
+Connection ~ 7150 2950
+$Comp
+L R R4
+U 1 1 519567FC
+P 7150 4050
+F 0 "R4" V 7230 4050 40  0000 C CNN
+F 1 "22k" V 7157 4051 40  0000 C CNN
+F 2 "~" V 7080 4050 30  0000 C CNN
+F 3 "~" H 7150 4050 30  0000 C CNN
+	1    7150 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7150 3600 7150 3700
+Wire Wire Line
+	7150 3700 7150 3800
+$Comp
+L GND #PWR3
+U 1 1 5195680C
+P 7150 4450
+F 0 "#PWR3" H 7150 4450 30  0001 C CNN
+F 1 "GND" H 7150 4380 30  0001 C CNN
+F 2 "" H 7150 4450 60  0000 C CNN
+F 3 "" H 7150 4450 60  0000 C CNN
+	1    7150 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4300 7150 4450
+Wire Wire Line
+	7150 3700 6950 3700
+Wire Wire Line
+	6950 3700 6950 3850
+Wire Wire Line
+	6950 3850 4800 3850
+Connection ~ 7150 3700
+Text Label 4800 3850 0    60   ~ 0
+PA0 (ADC1 IN0)
+$EndSCHEMATC

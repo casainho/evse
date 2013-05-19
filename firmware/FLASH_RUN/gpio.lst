@@ -1,0 +1,261 @@
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"gpio.c"
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.gpio_init,"ax",%progbits
+  24              		.align	2
+  25              		.global	gpio_init
+  26              		.thumb
+  27              		.thumb_func
+  29              	gpio_init:
+  30              	.LFB29:
+  31              		.file 1 "gpio.c"
+   1:gpio.c        **** /*
+   2:gpio.c        ****  * EBike Smart Controller
+   3:gpio.c        ****  *
+   4:gpio.c        ****  * Copyright (C) Jorge Pinto aka Casainho, 2012, 2013.
+   5:gpio.c        ****  *
+   6:gpio.c        ****  *   casainho [at] gmail [dot] com
+   7:gpio.c        ****  *     www.casainho.net
+   8:gpio.c        ****  *
+   9:gpio.c        ****  * Released under the GPL License, Version 3
+  10:gpio.c        ****  */
+  11:gpio.c        **** 
+  12:gpio.c        **** #include "stm32f10x_rcc.h"
+  13:gpio.c        **** #include "stm32f10x_gpio.h"
+  14:gpio.c        **** 
+  15:gpio.c        **** /*
+  16:gpio.c        ****  * PA8 -- signal for pilot (inverted logic)
+  17:gpio.c        ****  * PA0 -- ADC voltage for read state
+  18:gpio.c        ****  * PB5 -- LED
+  19:gpio.c        ****  */
+  20:gpio.c        **** 
+  21:gpio.c        **** void gpio_init (void)
+  22:gpio.c        **** {
+  32              		.loc 1 22 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39 0002 82B0     		sub	sp, sp, #8
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_offset 14, -4
+  44              		.cfi_offset 7, -8
+  45              	.LCFI2:
+  46              		.cfi_def_cfa_register 7
+  23:gpio.c        ****   /* Enable GPIOB clock. */
+  24:gpio.c        ****   RCC_APB2PeriphClockCmd( RCC_APB2Periph_AFIO  |
+  47              		.loc 1 24 0
+  48 0006 40F20D20 		movw	r0, #525
+  49 000a 4FF00101 		mov	r1, #1
+  50 000e 40F20003 		movw	r3, #:lower16:RCC_APB2PeriphClockCmd
+  51 0012 C0F20003 		movt	r3, #:upper16:RCC_APB2PeriphClockCmd
+  52 0016 9847     		blx	r3
+  25:gpio.c        ****                           RCC_APB2Periph_GPIOA |
+  26:gpio.c        ****                           RCC_APB2Periph_GPIOB |
+  27:gpio.c        ****                           RCC_APB2Periph_ADC1
+  28:gpio.c        ****                           , ENABLE);
+  29:gpio.c        **** 
+  30:gpio.c        ****   /* DAC Periph clock enable */
+  31:gpio.c        ****   RCC_APB1PeriphClockCmd( RCC_APB1Periph_DAC
+  53              		.loc 1 31 0
+  54 0018 4FF00050 		mov	r0, #536870912
+  55 001c 4FF00101 		mov	r1, #1
+  56 0020 40F20003 		movw	r3, #:lower16:RCC_APB1PeriphClockCmd
+  57 0024 C0F20003 		movt	r3, #:upper16:RCC_APB1PeriphClockCmd
+  58 0028 9847     		blx	r3
+  32:gpio.c        ****                           , ENABLE);
+  33:gpio.c        **** 
+  34:gpio.c        ****   /* Once the DAC channel is enabled, the corresponding GPIO pin is automatically
+  35:gpio.c        ****      connected to the DAC converter. In order to avoid parasitic consumption,
+  36:gpio.c        ****      the GPIO pin should be configured in analog */
+  37:gpio.c        ****   GPIO_InitTypeDef GPIO_InitStructure;
+  38:gpio.c        ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+  59              		.loc 1 38 0
+  60 002a 4FF00103 		mov	r3, #1
+  61 002e BB80     		strh	r3, [r7, #4]	@ movhi
+  39:gpio.c        ****   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
+  62              		.loc 1 39 0
+  63 0030 4FF00003 		mov	r3, #0
+  64 0034 FB71     		strb	r3, [r7, #7]
+  40:gpio.c        ****   GPIO_Init(GPIOA, &GPIO_InitStructure);
+  65              		.loc 1 40 0
+  66 0036 07F10403 		add	r3, r7, #4
+  67 003a 40F60000 		movw	r0, #:lower16:1073809408
+  68 003e C4F20100 		movt	r0, #:upper16:1073809408
+  69 0042 1946     		mov	r1, r3
+  70 0044 40F20003 		movw	r3, #:lower16:GPIO_Init
+  71 0048 C0F20003 		movt	r3, #:upper16:GPIO_Init
+  72 004c 9847     		blx	r3
+  41:gpio.c        **** 
+  42:gpio.c        ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+  73              		.loc 1 42 0
+  74 004e 4FF48073 		mov	r3, #256
+  75 0052 BB80     		strh	r3, [r7, #4]	@ movhi
+  43:gpio.c        ****   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  76              		.loc 1 43 0
+  77 0054 4FF00303 		mov	r3, #3
+  78 0058 BB71     		strb	r3, [r7, #6]
+  44:gpio.c        ****   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+  79              		.loc 1 44 0
+  80 005a 4FF01003 		mov	r3, #16
+  81 005e FB71     		strb	r3, [r7, #7]
+  45:gpio.c        ****   GPIO_Init(GPIOA, &GPIO_InitStructure);
+  82              		.loc 1 45 0
+  83 0060 07F10403 		add	r3, r7, #4
+  84 0064 40F60000 		movw	r0, #:lower16:1073809408
+  85 0068 C4F20100 		movt	r0, #:upper16:1073809408
+  86 006c 1946     		mov	r1, r3
+  87 006e 40F20003 		movw	r3, #:lower16:GPIO_Init
+  88 0072 C0F20003 		movt	r3, #:upper16:GPIO_Init
+  89 0076 9847     		blx	r3
+  46:gpio.c        **** 
+  47:gpio.c        ****   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+  90              		.loc 1 47 0
+  91 0078 4FF02003 		mov	r3, #32
+  92 007c BB80     		strh	r3, [r7, #4]	@ movhi
+  48:gpio.c        ****   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  93              		.loc 1 48 0
+  94 007e 4FF00303 		mov	r3, #3
+  95 0082 BB71     		strb	r3, [r7, #6]
+  49:gpio.c        ****   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+  96              		.loc 1 49 0
+  97 0084 4FF01003 		mov	r3, #16
+  98 0088 FB71     		strb	r3, [r7, #7]
+  50:gpio.c        ****   GPIO_Init(GPIOB, &GPIO_InitStructure);
+  99              		.loc 1 50 0
+ 100 008a 07F10403 		add	r3, r7, #4
+ 101 008e 40F60040 		movw	r0, #:lower16:1073810432
+ 102 0092 C4F20100 		movt	r0, #:upper16:1073810432
+ 103 0096 1946     		mov	r1, r3
+ 104 0098 40F20003 		movw	r3, #:lower16:GPIO_Init
+ 105 009c C0F20003 		movt	r3, #:upper16:GPIO_Init
+ 106 00a0 9847     		blx	r3
+  51:gpio.c        **** 
+  52:gpio.c        ****   /* Turn off port bits */
+  53:gpio.c        ****   GPIO_ResetBits(GPIOA, GPIO_Pin_8);
+ 107              		.loc 1 53 0
+ 108 00a2 40F60000 		movw	r0, #:lower16:1073809408
+ 109 00a6 C4F20100 		movt	r0, #:upper16:1073809408
+ 110 00aa 4FF48071 		mov	r1, #256
+ 111 00ae 40F20003 		movw	r3, #:lower16:GPIO_ResetBits
+ 112 00b2 C0F20003 		movt	r3, #:upper16:GPIO_ResetBits
+ 113 00b6 9847     		blx	r3
+  54:gpio.c        ****   GPIO_ResetBits(GPIOB, GPIO_Pin_5);
+ 114              		.loc 1 54 0
+ 115 00b8 40F60040 		movw	r0, #:lower16:1073810432
+ 116 00bc C4F20100 		movt	r0, #:upper16:1073810432
+ 117 00c0 4FF02001 		mov	r1, #32
+ 118 00c4 40F20003 		movw	r3, #:lower16:GPIO_ResetBits
+ 119 00c8 C0F20003 		movt	r3, #:upper16:GPIO_ResetBits
+ 120 00cc 9847     		blx	r3
+  55:gpio.c        **** }
+ 121              		.loc 1 55 0
+ 122 00ce 07F10807 		add	r7, r7, #8
+ 123 00d2 BD46     		mov	sp, r7
+ 124 00d4 80BD     		pop	{r7, pc}
+ 125              		.cfi_endproc
+ 126              	.LFE29:
+ 128 00d6 00BF     		.section	.text.debug_on,"ax",%progbits
+ 129              		.align	2
+ 130              		.global	debug_on
+ 131              		.thumb
+ 132              		.thumb_func
+ 134              	debug_on:
+ 135              	.LFB30:
+  56:gpio.c        **** 
+  57:gpio.c        **** void debug_on (void)
+  58:gpio.c        **** {
+ 136              		.loc 1 58 0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 1, uses_anonymous_args = 0
+ 140 0000 80B5     		push	{r7, lr}
+ 141              	.LCFI3:
+ 142              		.cfi_def_cfa_offset 8
+ 143 0002 00AF     		add	r7, sp, #0
+ 144              		.cfi_offset 14, -4
+ 145              		.cfi_offset 7, -8
+ 146              	.LCFI4:
+ 147              		.cfi_def_cfa_register 7
+  59:gpio.c        ****   GPIO_SetBits(GPIOB, GPIO_Pin_5);
+ 148              		.loc 1 59 0
+ 149 0004 40F60040 		movw	r0, #:lower16:1073810432
+ 150 0008 C4F20100 		movt	r0, #:upper16:1073810432
+ 151 000c 4FF02001 		mov	r1, #32
+ 152 0010 40F20003 		movw	r3, #:lower16:GPIO_SetBits
+ 153 0014 C0F20003 		movt	r3, #:upper16:GPIO_SetBits
+ 154 0018 9847     		blx	r3
+  60:gpio.c        **** }
+ 155              		.loc 1 60 0
+ 156 001a 80BD     		pop	{r7, pc}
+ 157              		.cfi_endproc
+ 158              	.LFE30:
+ 160              		.section	.text.debug_off,"ax",%progbits
+ 161              		.align	2
+ 162              		.global	debug_off
+ 163              		.thumb
+ 164              		.thumb_func
+ 166              	debug_off:
+ 167              	.LFB31:
+  61:gpio.c        **** 
+  62:gpio.c        **** void debug_off (void)
+  63:gpio.c        **** {
+ 168              		.loc 1 63 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 1, uses_anonymous_args = 0
+ 172 0000 80B5     		push	{r7, lr}
+ 173              	.LCFI5:
+ 174              		.cfi_def_cfa_offset 8
+ 175 0002 00AF     		add	r7, sp, #0
+ 176              		.cfi_offset 14, -4
+ 177              		.cfi_offset 7, -8
+ 178              	.LCFI6:
+ 179              		.cfi_def_cfa_register 7
+  64:gpio.c        ****   GPIO_ResetBits(GPIOB, GPIO_Pin_5);
+ 180              		.loc 1 64 0
+ 181 0004 40F60040 		movw	r0, #:lower16:1073810432
+ 182 0008 C4F20100 		movt	r0, #:upper16:1073810432
+ 183 000c 4FF02001 		mov	r1, #32
+ 184 0010 40F20003 		movw	r3, #:lower16:GPIO_ResetBits
+ 185 0014 C0F20003 		movt	r3, #:upper16:GPIO_ResetBits
+ 186 0018 9847     		blx	r3
+  65:gpio.c        **** }
+ 187              		.loc 1 65 0
+ 188 001a 80BD     		pop	{r7, pc}
+ 189              		.cfi_endproc
+ 190              	.LFE31:
+ 192              		.text
+ 193              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpio.c
+     /tmp/ccp7QYjd.s:24     .text.gpio_init:00000000 $t
+     /tmp/ccp7QYjd.s:29     .text.gpio_init:00000000 gpio_init
+     /tmp/ccp7QYjd.s:129    .text.debug_on:00000000 $t
+     /tmp/ccp7QYjd.s:134    .text.debug_on:00000000 debug_on
+     /tmp/ccp7QYjd.s:161    .text.debug_off:00000000 $t
+     /tmp/ccp7QYjd.s:166    .text.debug_off:00000000 debug_off
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+RCC_APB2PeriphClockCmd
+RCC_APB1PeriphClockCmd
+GPIO_Init
+GPIO_ResetBits
+GPIO_SetBits
